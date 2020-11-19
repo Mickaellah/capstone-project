@@ -129,3 +129,42 @@ Clicking the "Place Order" button should:
 2. Timeout for 3 seconds (to simulate an order being placed)
 3. Log "Order placed!" to the console
 4. Empty out the cart
+
+# Challenge
+
+1. Only render the "Place Order" button if there are items in the cart
+2. Change the trash icon to a filled-in trash icon when hovering over it
+Filled trash icon to use when hovering:
+<i className="ri-delete-bin-fill"></i>
+Empty trash icon to use when NOT hovering:
+<i className="ri-delete-bin-line"></i>
+
+
+# Challenge
+
+Synchronize the data on the app, to localStorage.
+
+The logic will happen in the Context file.
+    
+Don't forget to update the local storage everytime you update the state.
+
+
+how to integrate local storage in the project
+
+step 1:
+
+check if something with the key you chose is in local storage
+if yes -> set it to state
+if no -> get the data as usual
+
+step 2:
+
+everytime the value in state change, update the localstorage with the state value
+
+# Challenge:
+
+Using useEffect and useRef, make it so when this hook first loads,
+it sets up the "mouseenter" and "mouseleave" event listeners on the ref.
+
+Remember: the ref.current will represent the DOM node, which is where you can
+do imperative commands like `.addEventListener` and `removeEventListener`.
